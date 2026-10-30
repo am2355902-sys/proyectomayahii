@@ -1,0 +1,191 @@
+/* Color de fondo de la página blanco */
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Marquesina con doble línea */
+.marquesina-doble {
+    border-top: 4px double #333333;
+    border-bottom: 4px double #333333;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    height: 240px;
+    margin-bottom: 40px;
+    background-color: #fafafa;
+}
+
+.contenido-portafolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+/* 1. Primer renglón: "mi portafolio JavaScript" -> Times New Roman, 24px, rojo */
+.titulo-portafolio {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: red;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* 2. Segundo renglón: "Orlando Guadalupe Parra Velazquez" -> Arial Black, 16px, azul */
+.nombre-autor {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 16px;
+    color: blue;
+    margin: 0;
+}
+
+/* 3. Tercer renglón: "Campus Guadalajara Sur" -> Arial, 12px, rosa */
+.campus-info {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #ff69b4; /* Rosa */
+    margin: 0;
+    font-weight: bold;
+}
+
+/* 4. Cuarto renglón: Logotipo UVM */
+.contenedor-logo {
+    margin-top: 5px;
+}
+
+.logotipo-uvm {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Contenedor de botones en la parte de abajo */
+.contenedor-botones {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos base para los botones */
+.boton {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    user-select: none;
+}
+
+/* Botón Verde (UVM) */
+.boton-verde {
+    background-color: #28a745;
+}
+
+.boton-verde:hover {
+    background-color: #218838;
+}
+
+/* Botón Azul (Carrusel de imágenes) */
+.boton-azul {
+    background-color: #007bff;
+}
+
+.boton-azul:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto de "sumir" (hundimiento) al hacer click */
+.boton:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el Modal del Carrusel */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.cerrar {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #000;
+}
+
+.carrusel-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.carrusel-imagen-container img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carrusel-imagen-container p {
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.carrusel-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.carrusel-btn:hover {
+    background-color: #555;
+}
